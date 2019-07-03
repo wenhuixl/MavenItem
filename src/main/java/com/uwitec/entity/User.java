@@ -1,4 +1,4 @@
-package com.uwitec.com.uwitec.entity;
+package com.uwitec.entity;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.uwitec.com.uwitec.aop;
+package com.uwitec.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
