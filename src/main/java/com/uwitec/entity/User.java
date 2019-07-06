@@ -1,5 +1,6 @@
 package com.uwitec.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -10,26 +11,20 @@ import lombok.extern.slf4j.Slf4j;
  * @Date 2019/7/1
  */
 @Slf4j
-@Getter
-@Setter
+@Data // 相当于 @Getter @Setter
 public class User {
 
+    private Integer id;
     private String name;
     private Integer age;
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        User user = new User();
-        user.setName("zhangsan");
-        user.setAge(23);
-        log.info(user.toString());
     }
 
 }
