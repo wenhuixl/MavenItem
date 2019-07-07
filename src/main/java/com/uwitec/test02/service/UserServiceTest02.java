@@ -1,6 +1,6 @@
-package com.uwitec.service;
+package com.uwitec.test02.service;
 
-import com.uwitec.mapper.UserMapper;
+import com.uwitec.test02.mapper.UserMapperTest02;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,12 +14,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
-public class UserService {
+public class UserServiceTest02 {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserMapperTest02 userMapper;
 
-    @Transactional // 事务，无法处理多数据源
+    @Transactional(transactionManager = "test2TransactionManager") // 事务, 对应DataSourceConfig2
     public int insert(String name, Integer age) {
         int result = userMapper.insert(name, age);
         int i = 1 / age; // age=0时抛出异常，验证事务是否开启
