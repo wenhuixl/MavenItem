@@ -30,7 +30,6 @@ public class UserController {
         return userService.insert(name, age);
     }
 
-
     @RequestMapping("/insertUserTest1")
     public Integer insertUserTest1(String name, Integer age) {
         return userServiceTest01.insert(name, age);
