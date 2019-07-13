@@ -11,4 +11,9 @@ public class IndexClntroller {
         return "hi";
     }
 
+    @RequestMapping("/test")
+    public String test() {
+        return "ok";
+    }
+
 }
